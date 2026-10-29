@@ -1,0 +1,43 @@
+{
+  "_leia": "Um bloco por e-mail. 'obras' lista as obras que vão juntas no mesmo e-mail, com a pasta de custo e a nota fixa (se houver). Enquanto 'pendente' for true o app recusa montar o e-mail. Copie os endereços do e-mail do mês anterior.",
+  "assinatura": {
+    "linhas": ["Nome do engenheiro", "Engenheiro de Planejamento", "Iben Engenharia", "(19) 0000-0000"],
+    "logo": "config/assets/logo_iben.png",
+    "selos": "config/assets/selos_certificacao.png"
+  },
+  "emails": {
+    "VECCON KRONOS": {
+      "empreendimento": "VECCON KRONOS",
+      "obras": {
+        "LOTEAMENTO": {"pasta": "G:\\Meu Drive\\01 - OBRAS\\02 - Custo\\04 - Veccon Kronos - Loteamento"},
+        "CASAS": {"pasta": "G:\\Meu Drive\\01 - OBRAS\\02 - Custo\\05 - Veccon Kronos - Casas",
+                  "nota": "Conforme solicitação, a fim de não poluirmos a análise com o valor da SM referente ao muro externo, este foi desconsiderado dos valores finais e é analisado como item exclusivo."}
+      },
+      "para": [],
+      "cc": [],
+      "pendente": true
+    },
+    "VILLA FLORA II": {
+      "empreendimento": "VILLA FLORA II",
+      "obras": {"VILLA FLORA II": {"pasta": "G:\\Meu Drive\\01 - OBRAS\\02 - Custo\\01 - Villa Flora II - Condomínio das Azaleias"}},
+      "para": [],
+      "cc": [],
+      "pendente": true
+    },
+    "VIVA PARQUE UNIQUE": {
+      "empreendimento": "VIVA PARQUE UNIQUE",
+      "obras": {"UNIQUE": {"pasta": "G:\\Meu Drive\\01 - OBRAS\\02 - Custo\\02 - Viva Parque Unique"}},
+      "para": [], "cc": [], "pendente": true
+    },
+    "VIVA PARQUE ALTUS": {
+      "empreendimento": "VIVA PARQUE ALTUS",
+      "obras": {"ALTUS": {"pasta": "G:\\Meu Drive\\01 - OBRAS\\02 - Custo\\03 - Viva Parque Altus"}},
+      "para": [], "cc": [], "pendente": true
+    },
+    "DOM PEDRO II": {
+      "empreendimento": "VIVA E REALIZE CAMPINAS - DOM PEDRO II",
+      "obras": {"DOM PEDRO II": {"pasta": "G:\\Meu Drive\\01 - OBRAS\\02 - Custo\\06 - Viva e Realize Campinas - Dom Pedro II"}},
+      "para": [], "cc": [], "pendente": true
+    }
+  }
+}

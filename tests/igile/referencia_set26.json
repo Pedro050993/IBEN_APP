@@ -1,0 +1,263 @@
+{
+ "descricao": "Valores de referência de set/26 já conferidos com o iGile (vídeo do Raphael e teste de 22/10/2026). Toda correção do Pedro vira um caso novo aqui. Desde 29/10/2026 (v2.1): o período é o mês do NOME da planilha mais recente, maior revisão; o custo real sai da própria planilha (Incorrido N-1).",
+ "extracao": {
+  "Viva Parque Unique": {
+   "busca": {
+    "custo": [
+     "custos",
+     "unique",
+     "set26"
+    ],
+    "curva": [
+     "curva",
+     "unique",
+     "set"
+    ]
+   },
+   "esperado": {
+    "contingencia": 69834.59,
+    "diferenca": -1447574.13,
+    "retencao": 483590.43,
+    "a_pagar": 3166581.92,
+    "medicao": 5.77,
+    "avanco_fisico_acumulado": 0.4603,
+    "medicao_exclusiva_custo": 5.77,
+    "itens_nivel8": 89
+   },
+   "alvo_previsto": -634173.51,
+   "tolerancia_alvo": 100,
+   "nota": "O alvo de referência usou 46,03% arredondado; com o avanço exato (46,0265%) o alvo dá -634.125,23 (R$ 48 de diferença, dentro da tolerância de R$ 1.000 do OPR)."
+  },
+  "Villa Flora II": {
+   "busca": {
+    "custo": [
+     "custos",
+     "vila",
+     "flora",
+     "set26"
+    ],
+    "curva": [
+     "curva",
+     "vila",
+     "flora",
+     "set"
+    ]
+   },
+   "esperado": {
+    "itens_nivel8": 89
+   },
+   "alvo_previsto": -1316033.21,
+   "tolerancia_alvo": 1
+  },
+  "Viva Parque Altus": {
+   "busca": {
+    "custo": [
+     "custos",
+     "altus",
+     "set26"
+    ],
+    "curva": [
+     "curva",
+     "altus",
+     "set"
+    ]
+   },
+   "esperado": {
+    "contingencia": 527924.78,
+    "diferenca": -2991121.81
+   },
+   "alvo_previsto": -1647967.73,
+   "tolerancia_alvo": 1,
+   "nota": "Valores lançados no iGile em set/26. A skill antiga citava uma R03 com -3.191.388,85 e 627.924,78; a R03 do projeto em 28/10/2026 traz os valores lançados. Confirmar com o Pedro qual revisão vale."
+  }
+ },
+ "ajustes": [
+  {
+   "caso": "Unique previsto (melhorar, metade/metade)",
+   "args": [
+    "--etapa",
+    "previsto",
+    "--diferenca",
+    "-1447574.13",
+    "--contingencia",
+    "69834.59",
+    "--acumulado",
+    "0.4603",
+    "--gerado",
+    "-5697157.39",
+    "--estoque-atual",
+    "2576794.05",
+    "--adiantamento-atual",
+    "0"
+   ],
+   "esperado": {
+    "alvo_variacao_previsto": -634173.51,
+    "delta": 5062983.88,
+    "estoque_novo": 5108285.99,
+    "adiantamento_novo": 2531491.94
+   },
+   "nota": "Estoque e adiantamento atuais deduzidos dos valores finais de referência."
+  },
+  {
+   "caso": "Unique previsão",
+   "args": [
+    "--etapa",
+    "previsao",
+    "--diferenca",
+    "-1447574.13",
+    "--gerado",
+    "8072192.20",
+    "--previsao-atual",
+    "16123577.72"
+   ],
+   "esperado": {
+    "delta": 9519766.33,
+    "previsao_despesas_nova": 25643344.05
+   },
+   "nota": "Previsão de Despesas atual deduzida do valor final de referência."
+  },
+  {
+   "caso": "Vila Flora previsto (piorar, Agregado não Pago)",
+   "args": [
+    "--etapa",
+    "previsto",
+    "--diferenca",
+    "-2283966.58",
+    "--contingencia",
+    "378999.90",
+    "--acumulado",
+    "0.6908431625093048",
+    "--gerado",
+    "810078.35",
+    "--agregado-atual",
+    "0"
+   ],
+   "esperado": {
+    "alvo_variacao_previsto": -1316033.21,
+    "delta": -2126111.56,
+    "agregado_nao_pago_novo": 2126111.56
+   }
+  },
+  {
+   "caso": "Altus previsto (melhorar, estoque fixo)",
+   "args": [
+    "--etapa",
+    "previsto",
+    "--diferenca",
+    "-2991121.81",
+    "--contingencia",
+    "527924.78",
+    "--acumulado",
+    "0.6690360991562714",
+    "--gerado",
+    "-6162203.39",
+    "--estoque-fixo",
+    "3570580.00"
+   ],
+   "esperado": {
+    "alvo_variacao_previsto": -1647967.73,
+    "estoque_novo": 3570580.0,
+    "adiantamento_novo": 943655.66
+   }
+  }
+ ],
+ "conferencia_igile": {
+  "descricao": "Valores gravados no iGile em set/26, para o modo teste (planilha x iGile). Não são testados sem o navegador.",
+  "Viva Parque Unique": {
+   "periodo": 16,
+   "periodo_1": "jun/2025",
+   "indice": 1296.889,
+   "indice_nota": "INCC-DI de agosto/26",
+   "custo_real": 3043351.44,
+   "custo_real_nota": "a R03 de set/26 dá 3.280.355,79 para agosto e o iGile tem 3.257.646,59: regra em validação",
+   "realizado_recursos": 73,
+   "realizado_banco": 6.18,
+   "realizado_banco_nota": "PLS de 4,40% foi recusada pela Caixa",
+   "estoque_final": 5108285.99,
+   "adiantamento_final": 2531491.94,
+   "previsao_despesas_final": 25643344.05,
+   "gerado_previsto": -5697157.39,
+   "gerado_previsao": 8072192.2
+  },
+  "Villa Flora II": {
+   "periodo": 20,
+   "gerado_previsto": 810078.35,
+   "agregado_nao_pago_final": 2126111.56,
+   "previsao_despesas_final": 3297397.36
+  },
+  "Viva Parque Altus": {
+   "periodo": 24,
+   "periodo_1": "out/2024",
+   "gerado_previsto": -6162203.39,
+   "estoque_final": 3570580.0,
+   "adiantamento_final": 943655.66,
+   "previsao_despesas_final": 17858702.26
+  }
+ },
+ "escolha_arquivo": [
+  {
+   "caso": "Kronos Casas out/26: último mês pelo nome, cópia com código 1026",
+   "tipo": "custo",
+   "nomes": [
+    "Análise de Custos - Veccon Kronos - Casas - Set_26_R01.xlsm",
+    "Cópia de 1026 Análise de Custos - Veccon Kronos Casas - Outubro26_R03.xlsm",
+    "349.005 - Veccon Moradas 1 - Casas - R06_completo.xlsx"
+   ],
+   "esperado": {
+    "arquivo": "Cópia de 1026 Análise de Custos - Veccon Kronos Casas - Outubro26_R03.xlsm",
+    "mes": "2026-10"
+   }
+  },
+  {
+   "caso": "Exemplo do Pedro: novembro R01/R02/R03 vence outubro R04",
+   "tipo": "custo",
+   "nomes": [
+    "Análise de Custos - X - Out_26_R04.xlsm",
+    "Análise de Custos - X - Nov_26_R01.xlsm",
+    "Análise de Custos - X - Nov_26_R03.xlsm",
+    "Análise de Custos - X - Nov_26_R02.xlsm"
+   ],
+   "esperado": {
+    "arquivo": "Análise de Custos - X - Nov_26_R03.xlsm",
+    "mes": "2026-11"
+   }
+  },
+  {
+   "caso": "Código AAMM (2609) e virada de ano (Jan_27)",
+   "tipo": "custo",
+   "nomes": [
+    "2609 Análise de Custos - X - R05.xlsm",
+    "Análise de Custos - X - Dez_26_R02.xlsm",
+    "Análise de Custos - X - Jan_27_R01.xlsm"
+   ],
+   "esperado": {
+    "arquivo": "Análise de Custos - X - Jan_27_R01.xlsm",
+    "mes": "2027-01"
+   }
+  },
+  {
+   "caso": "Curva Física: mês por extenso",
+   "tipo": "curva",
+   "nomes": [
+    "Curva Física 17 - Veccon Kronos - Agosto26.xlsx",
+    "Curva Física 18 - Veccon Kronos - Setembro26.xlsx",
+    "Meta Mensal Veccon Kronos - Casas - Outubro26.xlsx"
+   ],
+   "esperado": {
+    "arquivo": "Curva Física 18 - Veccon Kronos - Setembro26.xlsx",
+    "mes": "2026-09"
+   }
+  },
+  {
+   "caso": "Empate no mesmo mês e revisão bloqueia",
+   "tipo": "custo",
+   "nomes": [
+    "Análise de Custos - X - Jan_27_R01.xlsm",
+    "Análise de Custos - X - Janeiro27_R01.xlsm"
+   ],
+   "esperado": {
+    "parada": true
+   }
+  }
+ ]
+}
